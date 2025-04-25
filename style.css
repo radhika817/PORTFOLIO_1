@@ -1,0 +1,154 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #b3c3ff, #ff80f0);
+    overflow-x: hidden;
+    color: #333;
+  }
+
+  /* Intro Section */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    
+    
+
+  }
+  
+
+  .intro-text {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+
+  .hi-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: #2c3e50;
+    animation: typing 3s steps(12), blink 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #333;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink {
+    100% { border-color: transparent }
+  }
+
+  .start-btn, .scroll-btn {
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .start-btn:hover, .scroll-btn:hover {
+    background: #34495e;
+    transform: translateY(-3px);
+  }
+
+  /* Section Styling */
+  .section {
+    display: none;
+    padding: 80px 30px;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 1;
+    animation: slideUp 1s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #b30a0a;
+  }
+
+  p, label, input, textarea {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #3498db;
+  }
+
+  img {
+    max-width: 40%;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+
+  .skill-bar {
+    margin: 15px 0;
+  }
+
+  .bar-container {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+  }
+
+  .bar {
+    padding: 10px;
+    color: white;
+    text-align: right;
+    border-radius: 10px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 600px) {
+    .hi-text {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+  }

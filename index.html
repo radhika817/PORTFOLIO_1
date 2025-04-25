@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Radhika's Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+  <link rel="stylesheet"href="style.css">
+</head>
+<body>
+  <!-- Intro Section -->
+  <div class="container" id="intro">
+    <div class="intro-text">
+      <i class="fa-brands fa-instagram"></i>   <i class="fa-brands fa-square-snapchat"></i>   <i class="fa-brands fa-linkedin"></i>   <i class="fa-brands fa-twitter"></i>
+
+      
+
+     <div class="hi-text">Hello!!</div>
+      <p>&lt; Welcome to My Portfolio &gt;</p>
+      <button class="start-btn" onclick="showSection('aboutMe')">Start</button>
+      
+      </div>
+  </div>
+
+  <!-- About Me Section -->
+  <div class="section" id="aboutMe" data-aos="fade-up">
+    <h2>About Me</h2>
+    <img src="photo2.jpg" alt="profile photo">
+    <p>Hi! I'm <strong>RADHIKA KANDALKAR</strong>, a passionate learner and tech enthusiast. I'm currently pursuing a B.Tech in Computer Engineering. I am driven by curiosity and have a keen interest in software development, coding, and problem-solving.</p>
+    <p>In my free time, I enjoy painting ,Dancing and capturing the beauty of nature. currently exploring the exciting world of  Computer Science. I'm passionate about learning new technologies and building a strong foundation in both theory and hands-on skills.
+
+      As I begin my engineering journey, I'm eager to dive into real-world projects, internships, and collaborations that help me grow and apply what I learn in the classroom. I have a growing interest in coding, robotics, design, AI, and I'm constantly looking for opportunities to challenge myself and improve.
+      
+      This portfolio is a space where I’ll be sharing my  learning experiences, and creative experiments along the way.
+      
+      </p>
+    
+       
+    <button class="scroll-btn" onclick="showSection('education')">Education <i class="fa-solid fa-arrow-down"></i></button>
+  </div>
+
+  <!-- Education Section -->
+  <div class="section" id="education" data-aos="fade-up">
+    <h2>Education</h2>
+    <p><b>Bachelor of Technology (B.Tech) in Computer Engineering</b> - MIT Academy of Engineering, Pune (2024 - Present)</p>
+    <p><b>Expected Graduation:2028</b></p>
+    <p><b>Higher Secondary Certificate (HSC)</b> - NTR highschool,Warud</p>
+    <p><b>Secondary School Certificate (SSC)</b> - New orange city convent , Warud</p>
+   
+
+      
+    </a>
+      <h5>Email id :</h5><a href="mailto:radhikakandalkar54@gmail.com">radhikakandalkar54@gmail.com</a><br>
+      <a href="mailto:202401040318@mitaoe.ac.in">202401040318@mitaoe.ac.in</a><br>
+    </p>
+    <button class="scroll-btn" onclick="showSection('skills')">Skills <i class="fa-solid fa-arrow-down"></i></button>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="section" id="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skill-bar">
+      <div class="bar-container">
+        <div class="bar" style="width: 90%; background: #27ae60;">C - 90%</div>
+      </div>
+    </div>
+    <div class="skill-bar">
+      <div class="bar-container">
+        <div class="bar" style="width: 85%; background: #2980b9;">C++ - 85%</div>
+      </div>
+    </div>
+    <div class="skill-bar">
+      <div class="bar-container">
+        <div class="bar" style="width: 70%; background: #f39c12;">Python - 70%</div>
+      </div>
+    </div>
+    <div class="skill-bar">
+      <div class="bar-container">
+        <div class="bar" style="width: 65%; background: #e74c3c;">JavaScript - 65%</div>
+      </div>
+    </div>
+    <button class="scroll-btn" onclick="showSection('certificates')">Certificates <i class="fa-solid fa-arrow-down"></i></button>
+  </div>
+
+  <!-- Certificates Section -->
+  <div class="section" id="certificates" data-aos="fade-up">
+    <h2>Certificates</h2><i class="fa-brands fa-linux"></i>
+    <p>Here are some of the courses and certifications I have completed:</p>
+    <img src="cert 2.jpg" alt="Certificate 1">
+    <img src="cert 3.jpg" alt="Certificate 2">
+    <img src="cert 4.jpg" alt="Certificate 3">
+    <img src="cert 1.jpg" alt="Certificate 4">
+    <button class="scroll-btn" onclick="showSection('contact')">Contact Me <i class="fa-solid fa-arrow-down"></i></button>
+  </div>
+  
+ 
+ 
+  <!-- Contact Me Section -->
+  <div class="section" id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+     <i class="fa-solid fa-messages"></i>
+  
+    <form id="contactForm">
+      <label><b>Name:</b></label>
+      <input type="text" required placeholder="Enter your name">
+      <label><b>Email:</b></label>
+      <input type="email" required placeholder="Enter your email">
+      <label><b>Message:</b></label>
+      <textarea rows="4" required placeholder="I'd love to hear from you!"></textarea>
+      <button type="submit" class="scroll-btn">Send Message</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Thank you! Your message has been sent.");
+    });
+  </script>
+</body>
+</html>
